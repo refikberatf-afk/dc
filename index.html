@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğruluk mu, Cesaretlik mi? 🔥</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <!-- 1. AŞAMA: OYUNCU EKLEME EKRANI -->
+        <div id="setup-screen" class="screen active">
+            <h1>Oyuncuları Ekle 👥</h1>
+            <p>Kimler oynuyor? İsimleri tek tek ekleyin.</p>
+            
+            <div class="input-group">
+                <input type="text" id="player-input" placeholder="Oyuncu adı (örn: Berat)">
+                <button onclick="addPlayer()" class="btn-add">Ekle</button>
+            </div>
+
+            <ul id="player-list"></ul>
+
+            <div class="mode-selection">
+                <label>Oyun Modu Seç:</label>
+                <select id="game-mode">
+                    <option value="mix">Karışık (Doğruluk & Cesaret)</option>
+                    <option value="truth">Sadece Doğruluk 🧠</option>
+                    <option value="dare">Sadece Cesaret 🦁</option>
+                </select>
+            </div>
+
+            <button onclick="startGame()" id="start-btn" class="btn-primary" disabled>Oyunu Başlat 🚀</button>
+        </div>
+
+        <!-- 2. AŞAMA: OYUN / TUR EKRANI -->
+        <div id="game-screen" class="screen">
+            <h1 id="tur-title">Sıra Kimde? 🤔</h1>
+            
+            <div class="match-box">
+                <div class="player-card" id="soran-kisi">-</div>
+                <div class="vs-text">➔</div>
+                <div class="player-card" id="hedef-kisi">-</div>
+            </div>
+
+            <div id="action-badge" class="badge mix">-</div>
+
+            <div class="btn-group">
+                <button onclick="nextTurn()" class="btn-primary">Sonraki Tur 👉</button>
+                <button onclick="resetGame()" class="btn-secondary">Oyunu Sıfırla 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
