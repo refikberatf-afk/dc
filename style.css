@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.screen {
+    display: none !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.screen.active {
+    display: flex !important;
+}
+
+h1 {
+    color: #4f46e5;
+    font-size: 22px;
+}
+
+p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #4f46e5;
+}
+
+#player-list {
+    list-style: none;
+    width: 100%;
+    max-height: 120px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-right: 5px;
+}
+
+#player-list li {
+    background: #f1f5f9;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mode-selection {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mode-selection label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #475569;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #cbd5e1;
+    font-size: 14px;
+    background: white;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-add {
+    background: #4f46e5;
+    color: white;
+}
+
+.btn-primary {
+    background: #22c55e;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.btn-secondary {
+    background: #ef4444;
+    color: white;
+    width: 100%;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Oyun Ekranı Tasarımı */
+.match-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.player-card {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    padding: 20px 10px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e293b;
+    flex: 1;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.vs-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #94a3b8;
+}
+
+.badge {
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.badge.truth {
+    background: #3b82f6; /* Mavi - Doğruluk */
+}
+
+.badge.dare {
+    background: #f97316; /* Turuncu - Cesaret */
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
